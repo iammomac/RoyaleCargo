@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <title>Shipment</title>
+</head>
+    <body >
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+        }
+    </style>
+<div class="container">
+<header class="top-bar">
+    <div class="logo">
+<span> <img src="royal_cargo.png" alt="LOGO" width="150"></span>
+</div>
+
+    <nav class="nav">
+        <a href="dashboard.html" style="text-decoration: none;">Dashboard</a>
+        <a href="cargo.html" style="text-decoration: none;">Cargo</a>
+        <a href="shipment.html" style="text-decoration: none;" class="active" >Shipment</a>
+        <a href="orders.html" style="text-decoration: none;">Orders</a>
+        <a>Warehouse</a>
+    </nav>
+
+    <div class="profile">
+        <!-- <img src="alex_tuki.jpg" alt="User profile"> -->
+        <div>
+            <strong>Naddyir</strong><br>
+            <small>Deportation Manager</small>
+        </div>
+    </div>
+</header>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+        <h1 style="font-size: 24px; font-weight: bold; padding-left: 100px;">Shipment</h1>
+        <div style="display: flex; gap: 10px;"> 
+            <button style="padding: 10px 20px; background-color: #bbcee3; color: #6c5ce7;; border: none; border-radius: 5px; cursor: pointer;">Save as Draft</button>
+            <button style="padding: 10px 20px; background-color: #6c5ce7;; color: white; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+        </div>
+    </div>
+
+   <div style="display: flex; gap: 40px;">
+    <div style="padding-left: 120px; display: flex; flex-direction: column; width: 35%; gap: 10px;">
+        <div style="display: flex; gap: 10px; justify-content: space-between;">
+        <input type="text" placeholder="Search" style="width: 300px; height: 30px; border: none; border-radius: 5px; padding: 0 10px;">
+        <button style="padding: 5px 10px; background-color: white; color: black; border: none; border-radius: 5px; cursor: pointer;">
+            <img src="/icons/options.png" alt="Search" style="width: 15px; height: 15px;">
+        </button>
+        </div>
+            <button style="padding: 5px 10px; background-color: oklch(90.1% 0.058 230.902); color: black; border: none; border-radius: 5px; cursor: pointer;"> 
+                <div style="display: flex; gap: 5px; align-items: center; justify-content: center;">
+                    <img src="/icons/plus-latest.png" alt="Add" style="width: 12px; height: 12px;">
+                    <h1 style="font-size: 10px; font-weight: bold; color: #6c5ce7;">Add load</h1>
+                </div>
+            </button>
+    
+            <div style="max-height: 890px; overflow-y: auto; overflow-x: hidden; display: flex; flex-direction: column; gap: 12px; padding-right: 4px;">
+                <!-- Cargo card 1 -->
+                <div style="background-color: white; border-radius: 10px; flex-shrink: 0; border: 1px solid #eee;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ccc; flex-direction: row;">
+                      <div style="display: flex; align-items: center; justify-content: space-between; flex-direction: row; gap: 5px; padding: 5px 10px; border-radius: 10px;">
+                        <h1 style="font-size: 12px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Cargo ID: </h1>
+                        <h1 style="font-size: 12px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">1234567890</h1>
+                      </div>
+                        <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-direction: row;">
+                            <h1 style="font-size: 12px; font-weight: bold; color: oklch(69.6% 0.17 162.48); background-color: oklch(90.5% 0.093 164.15); padding: 5px 10px; border-radius: 10px; display: flex; flex-direction: row;">Delivery</h1>
+                        <img src="/icons/dots.png" alt="Edit" style="width: 15px; height: 15px;">
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 10px; border-bottom: 1px solid #ccc;">
+                        <div style="padding: 10px 10px;">
+                            <img src="/icons/circle.png" alt="circle-green" style="width: 10px; height: 10px; margin-left: 7px;">
+                            <div style="border-right: 1px dashed #ccc; height: 40px; margin-left: 10px; width: 2px; align-items: center; justify-content: center;"></div>
+                            <img src="/icons/circle-green.png" alt="circle-green" style="width: 10px; height: 10px; margin-left: 7px;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; padding: 10px 10px;">
+                            <div>
+                                <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">06.05.2023</h1>
+                                <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">8:00 AM</h1>
+                            </div>
+                            <div>
+                                <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">06.05.2023</h1>
+                                <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">8:00 AM</h1>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-left: 50px; padding: 10px 10px;">
+                            <div>
+                                <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Anytown, NY 12345</h1>
+                                <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">123 Man St</h1>
+                            </div>
+                            <div>
+                                <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Springfield, MA 12345</h1>
+                                <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">456 Elm Av</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 10px; align-items: center; justify-content: space-between; padding: 10px 10px;">
+                        <div style="display: flex; flex-direction: row; gap: 10px; align-items: center; justify-content: center;">
+                            <img src="/icons/profile.png" alt="Avatar" style="width: 20px; height: 20px;">
+                            <div>
+                            <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Ava Thompson</h1>
+                            <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Client</h1>
+                            </div>
+                        </div>
+                        <img src="/icons/telephone.png" alt="telephone" style="width: 12px; height: 12px; border: 1px solid gray; border-radius: 50%; padding: 8px;">
+                    </div>
+                </div>
+                <!-- Cargo card 2 -->
+                <div style="background-color: white; border-radius: 10px; flex-shrink: 0; border: 1px solid #eee;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ccc; flex-direction: row;">
+                      <div style="display: flex; align-items: center; justify-content: space-between; flex-direction: row; gap: 5px; padding: 5px 10px; border-radius: 10px;">
+                        <h1 style="font-size: 12px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Cargo ID: </h1>
+                        <h1 style="font-size: 12px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">1234567891</h1>
+                      </div>
+                        <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-direction: row;">
+                            <h1 style="font-size: 12px; font-weight: bold; color: oklch(69.6% 0.17 162.48); background-color: oklch(90.5% 0.093 164.15); padding: 5px 10px; border-radius: 10px; display: flex; flex-direction: row;">Delivery</h1>
+                        <img src="/icons/dots.png" alt="Edit" style="width: 15px; height: 15px;">
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 10px; border-bottom: 1px solid #ccc;">
+                        <div style="padding: 10px 10px;">
+                            <img src="/icons/circle.png" alt="circle-green" style="width: 10px; height: 10px; margin-left: 7px;">
+                            <div style="border-right: 1px dashed #ccc; height: 40px; margin-left: 10px; width: 2px;"></div>
+                            <img src="/icons/circle-green.png" alt="circle-green" style="width: 10px; height: 10px; margin-left: 7px;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; padding: 10px 10px;">
+                            <div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">06.05.2023</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">8:00 AM</h1></div>
+                            <div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">06.05.2023</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">8:00 AM</h1></div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-left: 50px; padding: 10px 10px;">
+                            <div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Anytown, NY 12345</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">123 Man St</h1></div>
+                            <div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Springfield, MA 12345</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">456 Elm Av</h1></div>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 10px; align-items: center; justify-content: space-between; padding: 10px 10px;">
+                        <div style="display: flex; flex-direction: row; gap: 10px; align-items: center;"><img src="/icons/profile.png" alt="Avatar" style="width: 20px; height: 20px;"><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Ava Thompson</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Client</h1></div></div>
+                        <img src="/icons/telephone.png" alt="telephone" style="width: 12px; height: 12px; border: 1px solid gray; border-radius: 50%; padding: 8px;"></div>
+                </div>
+                <!-- Cargo card 3 -->
+                <div style="background-color: white; border-radius: 10px; flex-shrink: 0; border: 1px solid #eee;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ccc; flex-direction: row;">
+                      <div style="display: flex; align-items: center; justify-content: space-between; flex-direction: row; gap: 5px; padding: 5px 10px; border-radius: 10px;">
+                        <h1 style="font-size: 12px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Cargo ID: </h1>
+                        <h1 style="font-size: 12px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">1234567892</h1>
+                      </div>
+                        <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-direction: row;">
+                            <h1 style="font-size: 12px; font-weight: bold; color: oklch(69.6% 0.17 162.48); background-color: oklch(90.5% 0.093 164.15); padding: 5px 10px; border-radius: 10px;">Delivery</h1>
+                        <img src="/icons/dots.png" alt="Edit" style="width: 15px; height: 15px;"></div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 10px; border-bottom: 1px solid #ccc;">
+                        <div style="padding: 10px 10px;"><img src="/icons/circle.png" alt="circle" style="width: 10px; height: 10px; margin-left: 7px;"><div style="border-right: 1px dashed #ccc; height: 40px; margin-left: 10px; width: 2px;"></div><img src="/icons/circle-green.png" alt="circle-green" style="width: 10px; height: 10px; margin-left: 7px;"></div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; padding: 10px 10px;"><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">06.05.2023</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">8:00 AM</h1></div><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">06.05.2023</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">8:00 AM</h1></div></div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-left: 50px; padding: 10px 10px;"><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Anytown, NY 12345</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">123 Man St</h1></div><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Springfield, MA 12345</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">456 Elm Av</h1></div></div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 10px; align-items: center; justify-content: space-between; padding: 10px 10px;"><div style="display: flex; flex-direction: row; gap: 10px; align-items: center;"><img src="/icons/profile.png" alt="Avatar" style="width: 20px; height: 20px;"><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Ava Thompson</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Client</h1></div></div><img src="/icons/telephone.png" alt="telephone" style="width: 12px; height: 12px; border: 1px solid gray; border-radius: 50%; padding: 8px;"></div>
+                </div>
+                <!-- Cargo card 4 -->
+                <div style="background-color: white; border-radius: 10px; flex-shrink: 0; border: 1px solid #eee;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ccc; flex-direction: row;">
+                      <div style="display: flex; align-items: center; justify-content: space-between; flex-direction: row; gap: 5px; padding: 5px 10px; border-radius: 10px;"><h1 style="font-size: 12px; font-weight: bold; padding: 0;">Cargo ID: </h1><h1 style="font-size: 12px; font-weight: bold; padding: 0;">1234567893</h1></div>
+                        <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-direction: row;"><h1 style="font-size: 12px; font-weight: bold; color: oklch(69.6% 0.17 162.48); background-color: oklch(90.5% 0.093 164.15); padding: 5px 10px; border-radius: 10px;">Delivery</h1><img src="/icons/dots.png" alt="Edit" style="width: 15px; height: 15px;"></div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 10px; border-bottom: 1px solid #ccc;">
+                        <div style="padding: 10px 10px;"><img src="/icons/circle.png" alt="circle" style="width: 10px; height: 10px; margin-left: 7px;"><div style="border-right: 1px dashed #ccc; height: 40px; margin-left: 10px; width: 2px;"></div><img src="/icons/circle-green.png" alt="circle-green" style="width: 10px; height: 10px; margin-left: 7px;"></div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; padding: 10px 10px;"><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">06.05.2023</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">8:00 AM</h1></div><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">06.05.2023</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">8:00 AM</h1></div></div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-left: 50px; padding: 10px 10px;"><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Anytown, NY 12345</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">123 Man St</h1></div><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Springfield, MA 12345</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">456 Elm Av</h1></div></div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 10px; align-items: center; justify-content: space-between; padding: 10px 10px;"><div style="display: flex; flex-direction: row; gap: 10px; align-items: center;"><img src="/icons/profile.png" alt="Avatar" style="width: 20px; height: 20px;"><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Ava Thompson</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Client</h1></div></div><img src="/icons/telephone.png" alt="telephone" style="width: 12px; height: 12px; border: 1px solid gray; border-radius: 50%; padding: 8px;"></div>
+                </div>
+                <!-- Cargo card 5 -->
+                <div style="background-color: white; border-radius: 10px; flex-shrink: 0; border: 1px solid #eee;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ccc; flex-direction: row;">
+                      <div style="display: flex; align-items: center; justify-content: space-between; flex-direction: row; gap: 5px; padding: 5px 10px; border-radius: 10px;"><h1 style="font-size: 12px; font-weight: bold; padding: 0;">Cargo ID: </h1><h1 style="font-size: 12px; font-weight: bold; padding: 0;">1234567894</h1></div>
+                        <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-direction: row;"><h1 style="font-size: 12px; font-weight: bold; color: oklch(69.6% 0.17 162.48); background-color: oklch(90.5% 0.093 164.15); padding: 5px 10px; border-radius: 10px;">Delivery</h1><img src="/icons/dots.png" alt="Edit" style="width: 15px; height: 15px;"></div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 10px; border-bottom: 1px solid #ccc;">
+                        <div style="padding: 10px 10px;"><img src="/icons/circle.png" alt="circle" style="width: 10px; height: 10px; margin-left: 7px;"><div style="border-right: 1px dashed #ccc; height: 40px; margin-left: 10px; width: 2px;"></div><img src="/icons/circle-green.png" alt="circle-green" style="width: 10px; height: 10px; margin-left: 7px;"></div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; padding: 10px 10px;"><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">06.05.2023</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">8:00 AM</h1></div><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">06.05.2023</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">8:00 AM</h1></div></div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-left: 50px; padding: 10px 10px;"><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Anytown, NY 12345</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">123 Man St</h1></div><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Springfield, MA 12345</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">456 Elm Av</h1></div></div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; gap: 10px; align-items: center; justify-content: space-between; padding: 10px 10px;"><div style="display: flex; flex-direction: row; gap: 10px; align-items: center;"><img src="/icons/profile.png" alt="Avatar" style="width: 20px; height: 20px;"><div><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Ava Thompson</h1><h1 style="font-size: 10px; font-weight: bold; padding: 0;">Client</h1></div></div><img src="/icons/telephone.png" alt="telephone" style="width: 12px; height: 12px; border: 1px solid gray; border-radius: 50%; padding: 8px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px; background-color: white; border-radius: 10px; padding: 10px 10px; width: 100%;">
+            <!-- Row 1: Map overview + Route details -->
+            <div style="display: flex; flex-direction: row; gap: 16px; width: 100%; align-items: flex-start;">
+                <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0;">
+                    <h1 style="font-size: 16px; font-weight: bold; padding: 0px 20px; border-radius: 10px;">MAP OVERVIEW</h1>
+                    <div style="width: 100%; max-width: 600px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3961.785333826776!2d39.14054953013306!3d-6.79595299821861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2stz!4v1770560490449!5m2!1sen!2stz" width="100%" height="450" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; width: 25%; min-width: 220px; gap: 10px; margin-right: 50px; background-color: white; border-radius: 10px; padding: 10px 0px;">
+                    <h1 style="font-size: 16px; font-weight: bold; padding: 0px 20px; border-radius: 10px;">ROUTE DETAILS</h1>
+                    <div>
+                        <div style="display: flex; flex-direction: row; border-radius: 10px; border: 1px solid #ccc;">
+                            <div style="padding: 10px 10px;">
+                                 <h1 style="justify-content: center; align-items: center; display: flex; font-size: 10px; font-weight: bold; padding: 2px 0px; border-radius: 10px; width:17px; background-color: oklch(90.1% 0.058 230.902);">1</h1>
+                                <div style="border-right: 1px dashed #ccc; height: 40px; margin-left: 5px; width: 2px; align-items: center; justify-content: center;"></div>
+                                <h1 style="justify-content: center; align-items: center; display: flex; font-size: 10px; font-weight: bold; padding: 2px 0px; border-radius: 10px; width:17px;  background-color: oklch(90.1% 0.058 230.902);">2</h1>
+                                <div style="border-right: 1px dashed #ccc; height: 40px; margin-left: 5px; width: 2px; align-items: center; justify-content: center;"></div>
+                                <h1 style="justify-content: center; align-items: center; display: flex; font-size: 10px; font-weight: bold; padding: 2px 0px; border-radius: 10px; width:17px;  background-color: oklch(90.1% 0.058 230.902);">3</h1>
+                                <div style="border-right: 1px dashed #ccc; height: 40px; margin-left: 5px; width: 2px; align-items: center; justify-content: center;"></div>
+                                <h1 style="justify-content: center; align-items: center; display: flex; font-size: 10px; font-weight: bold; padding: 2px 0px; border-radius: 10px; width:17px;  background-color: oklch(90.1% 0.058 230.902);">4</h1>
+                                <div style="border-right: 1px dashed #ccc; height: 40px; margin-left: 5px; width: 2px; align-items: center; justify-content: center;"></div>
+                                <h1 style="justify-content: center; align-items: center; display: flex; font-size: 10px; font-weight: bold; padding: 2px 0px; border-radius: 10px; width:17px;  background-color: oklch(90.1% 0.058 230.902);">5</h1>
+                                <div style="border-right: 1px dashed #ccc; height: 40px; margin-left: 5px; width: 2px; align-items: center; justify-content: center;"></div>
+                                <h1 style="justify-content: center; align-items: center; display: flex; font-size: 10px; font-weight: bold; padding: 2px 0px; border-radius: 10px; width:17px;  background-color: oklch(90.1% 0.058 230.902);">6</h1>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 24px; padding: 10px 10px;">
+                                <div>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Anytown, NY 12345</h1>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px; color: oklch(69.6% 0.17 162.48); color: #ccc">123 Man St</h1>
+                                </div>
+                                <div>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Springfield, MA 12345</h1>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px; color: oklch(69.6% 0.17 162.48); color: #ccc">456 Elm Av</h1>
+                                </div>
+                                <div>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Springfield, MA 12345</h1>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px; color: oklch(69.6% 0.17 162.48); color: #ccc">456 Elm Av</h1>
+                                </div>
+                                <div>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Springfield, MA 12345</h1>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px; color: oklch(69.6% 0.17 162.48); color: #ccc">456 Elm Av</h1>
+                                </div>
+                                <div>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Springfield, MA 12345</h1>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px; color: oklch(69.6% 0.17 162.48); color: #ccc">456 Elm Av</h1>
+                                </div>
+                                <div>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px;">Springfield, MA 12345</h1>
+                                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 10px; color: oklch(69.6% 0.17 162.48); color: #ccc">456 Elm Av</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Truck details -->
+            <div style="display: flex; flex-direction: row; gap: 180px; width: 100%;">
+                <div style="display: flex; flex-direction: column; gap: 10px; width: 40%;">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 10px 10px 0;">
+                        <h1 style="font-size: 16px; font-weight: bold; padding: 0; margin: 0; text-align: left;">TRUCK</h1>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0px; border-radius: 10px; border: 1px solid #ccc; width: 140%; max-width: 900px; padding-bottom: 0px;">
+        <div style="display: flex; justify-content: space-between; flex-direction: row; align-items: center; gap: 10px; padding: 10px 10px;">
+
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <img src="/icons/cargo-truck.png" alt="cargo-truck" style="width: 20px; height: 20px; border-radius: 20%; border: 1px solid #ccc; padding: 5px 5px; background-color: oklch(90.1% 0.058 230.902);">
+                <div>
+                    <h1 style="font-size: 16px; font-weight: bold; padding: 0px 0px 0px 0px; border-radius: 0px; margin-bottom: 2px;">Volvo FMX 860</h1>
+                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 0px; margin-top: 0px; color: oklch(69.6% 0.17 162.48); color: #ccc;">Truck</h1>
+                </div>
+            </div>
+
+            <div>
+                <img src="/icons/edit-text-black.png" alt="edit" style="width: 15px; height: 15px; padding: 5px 18px;">
+            </div>
+         </div>
+           
+
+        <div style="display: flex; flex-direction: row; align-items: flex-start; padding: 0 10px 12px; gap: 0;">
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Truck number</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">XL 43543</h1>
+            </div>
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Truck type</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">Flatbed Truck</h1>
+            </div>
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Trailer number</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">TN 34-33-1</h1>
+            </div>
+        </div>
+
+        
+      </div>
+     </div>
+
+
+                <div style="display: flex; flex-direction: column; gap: 10px; width: 50%;">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 10px 0px 0 0;">
+                        <h1 style="font-size: 16px; font-weight: bold; padding: 0; margin: 0; text-align: left;">DRIVER</h1>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0px; border-radius: 10px; border: 1px solid #ccc; width: 100%; padding-bottom: 0px;">
+        <div style="display: flex; justify-content: space-between; flex-direction: row; align-items: center; gap: 10px; padding: 10px 10px;">
+
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <img src="/icons/chauffer.png" alt="cargo-truck" style="width: 20px; height: 20px; border-radius: 20%; border: 1px solid #ccc; padding: 5px 5px; background-color: oklch(90.1% 0.058 230.902);">
+                <div>
+                    <h1 style="font-size: 16px; font-weight: bold; padding: 0px 0px 0px 0px; border-radius: 0px; margin-bottom: 2px;">Artem Bezrukov</h1>
+                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 0px; margin-top: 0px; color: oklch(69.6% 0.17 162.48); color: #ccc;">Driver</h1>
+                </div>
+            </div>
+
+            <div>
+                <img src="/icons/edit-text-black.png" alt="edit" style="width: 15px; height: 15px; padding: 5px 18px;">
+            </div>
+         </div>
+           
+
+        <div style="display: flex; flex-direction: row; align-items: flex-start; padding: 0 10px 12px; gap: 0;">
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Phone number</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">+49 89 412 07 295</h1>
+            </div>
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Email address</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">Flatbed Truck</h1>
+            </div>
+        </div>
+
+        
+      </div>
+     </div>
+            </div>
+
+            <!-- Row 3: Truck details (duplicate) -->
+            <div style="display: flex; flex-direction: row; gap: 180px; width: 100%;">
+                <div style="display: flex; flex-direction: column; gap: 10px; width: 40%;">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 10px 10px 0;">
+                        <h1 style="font-size: 16px; font-weight: bold; padding: 0; margin: 0; text-align: left;">END LOCATION</h1>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0px; border-radius: 10px; height: 60px; items-center: center; justify-content: center; border: 1px solid #ccc; width: 140%; max-width: 900px; padding-bottom: 0px;">
+        <div style="display: flex; justify-content: space-between; flex-direction: row; align-items: center; gap: 10px; padding: 10px 10px;">
+
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <img src="/icons/location.png" alt="cargo-truck" style="width: 20px; height: 20px; border-radius: 20%;">
+                <div>
+                    <h1 style="font-size: 16px; font-weight: bold; padding: 0px 0px 0px 0px; border-radius: 0px; margin-bottom: 2px;">Mountain View, IL 67890</h1>
+                    <h1 style="font-size: 10px; font-weight: bold; padding: 0px 0px; border-radius: 0px; margin-top: 0px; color: oklch(69.6% 0.17 162.48); color: #ccc;">321 Maple Lane</h1>
+                </div>
+            </div>
+
+            <div>
+                <img src="/icons/edit-text-black.png" alt="edit" style="width: 15px; height: 15px; padding: 5px 18px;">
+            </div>
+         </div>
+           
+
+        <!-- <div style="display: flex; flex-direction: row; align-items: flex-start; padding: 0 10px 12px; gap: 0;">
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Truck number</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">XL 43543</h1>
+            </div>
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Truck type</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">Flatbed Truck</h1>
+            </div>
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Trailer number</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">TN 34-33-1</h1>
+            </div>
+        </div> -->
+
+        
+      </div>
+     </div>
+
+
+                <div style="display: flex; flex-direction: column; gap: 10px; width: 50%;">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 10px 10px 0;">
+                        <h1 style="font-size: 16px; font-weight: bold; padding: 0; margin: 0; text-align: left;">START TIME</h1>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0px; border-radius: 10px; height: 60px; items-center: center; justify-content: center; border: 1px solid #ccc; width: 100%; padding-bottom: 0px;">
+        <div style="display: flex; justify-content: space-between; flex-direction: row; align-items: center; gap: 10px; padding: 10px 10px;">
+
+            <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
+                <img src="/icons/clock.png" alt="cargo-truck" style="width: 20px; height: 20px; border-radius: 20%;">
+                <div>
+                    <h1 style="font-size: 16px; font-weight: bold; padding: 0px 0px 0px 0px; border-radius: 0px; margin-bottom: 2px;">12.08.2022, 8:30</h1>
+                </div>
+            </div>
+
+            <div>
+                <img src="/icons/edit-text-black.png" alt="edit" style="width: 15px; height: 15px; padding: 5px 18px;">
+            </div>
+         </div>
+           
+        <!-- <div style="display: flex; flex-direction: row; align-items: flex-start; padding: 0 10px 12px; gap: 0;">
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Truck number</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">XL 43543</h1>
+            </div>
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Truck type</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">Flatbed Truck</h1>
+            </div>
+            <div style="flex: 1; min-width: 0; padding: 0 10px;">
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #ccc; margin-bottom: 2px;">Trailer number</h1>
+                <h1 style="font-size: 10px; padding: 0; border-radius: 0; color: #000; margin-top: 0;">TN 34-33-1</h1>
+            </div>
+        </div> -->
+
+        
+      </div>
+
+      
+     </div>
+            </div>
+
+            <!-- Bottom section -->
+            <div style="display: flex; flex-direction: row; gap: 16px; width: 100%; margin-top: 16px;">
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 10px; flex: 1; border-radius: 10px; padding: 16px; min-height: 60px;">
+                    <h1 style="font-size: 14px; font-weight: bold; padding: 0; margin: 0 0 8px 0; width: 200px; color: #333;">NOTE FOR DRIVER :</h1>
+                    <p style="font-size: 12px; background-color: #666; background-color: rgb(217, 232, 237); padding: 10px; border-radius: 10px;">Before loading, inpect the cargo for any visible damage or discrepanies, Note any observations and inform the logistics team immediately</p>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   
+</body> 
+</html>

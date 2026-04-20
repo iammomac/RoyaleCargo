@@ -1,0 +1,303 @@
+/* ===============================
+   ROOT VARIABLES (soft UI)
+================================ */
+:root {
+    --bg-main: #f4f6fb;
+    --bg-card: #ffffff;
+    --bg-soft: #f1f3f9;
+    --primary: #6c5ce7;
+    --secondary: #00c2ff;
+    --success: #22c55e;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-soft: #e5e7eb;
+    --radius: 14px;
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
+     --topbar-height: 56px;
+}
+
+/* ===============================
+   GLOBAL
+================================ */
+* {
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-main);
+    color: var(--text-main);
+}
+
+
+
+.container {
+    /* max-width: 1400px;
+    margin: auto;
+    padding: 24px; */
+
+    width: 90%;
+    margin: 40px auto;
+}
+
+
+.cargo-title {
+    padding: 0 160px;
+}
+
+.cargo-cards {
+    /* display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px; */
+
+    
+     display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    /* width: 170px;
+    height: 150px;
+    border-radius: 20px;
+    position: relative; */
+
+    flex: 1;
+    /* backdrop-filter: blur(25px); */
+    /* background: rgba(255,255,255,0.4); */
+    padding: 20px;
+    border-radius: 20px;
+    /* box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    color: #222; */
+
+}
+
+.purple {background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+.grey { background: linear-gradient(135deg, var(--secondary), var(--primary)); }
+
+.card-arrow {
+    width: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.card-content {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.card-content h1 {
+    color: #fff;
+    font-size: 25px;
+    margin: 0;
+}
+
+.card-content h4 {
+    color: #ccc;
+    margin: 0;
+}
+
+.mini-icon {
+    width: 20px;
+}
+
+.cargo-controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* padding bottom: ;: 0 150px; */
+    padding-bottom: 20px;
+}
+
+.search-box {
+    width: 700px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 0 20px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.control-box {
+    width: 220px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+
+
+.new-order-box {
+    width: 150px;
+    height: 30px;
+    background: var(--primary);
+    border-radius: 20px;
+}
+
+.new-order-box button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center space-evenly space-around;
+    gap: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+/* .new-order-box button img p {
+    font-size: 12px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+} */
+.table-wrapper {
+   backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.6);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    /* margin: 20px 150px; */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+}
+
+tbody tr {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+tbody tr:hover {
+    background: rgba(255,255,255,0.7);
+}
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+    align-items: center;
+    flex: 1;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.6);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+
+}
+
+thead {
+    background: #f0f0f0;
+     flex: 1;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.6);
+    padding: 20px;
+    border-end-end-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+th, td {
+    font-size: 12px;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+
+
+     flex: 1;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.6);
+    padding: 20px;
+    /* border-radius: 20px; */
+   /*box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+} */ 
+
+/* Sidebar hidden by default */
+.order-sidebar {
+    position: fixed;
+    top: 0;
+    right: -420px;   /* hide off-screen */
+    width: 400px;
+    height: 100%;
+    background: #fff;
+    padding: 30px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+/* When opened */
+.order-sidebar.open {
+    right: 0;
+}
+
+/* Overlay */
+.screen-blur-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 900;
+}
+
+.screen-blur-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Control icon sizes globally */
+.cargo-cards img {
+    max-width: 25px;
+    height: auto;
+}
+
+.search-box img,
+.control-box img {
+    width: 15px;
+    height: 15px;
+}
+
+.new-order-box img {
+    width: 12px;
+    height: 12px;
+}
+
+/* Card arrow positioning */
+.card-arrow {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.mini-icon {
+    width: 18px;
+    vertical-align: middle;
+}

@@ -1,0 +1,296 @@
+/* ===============================
+   ROOT VARIABLES (soft UI)
+================================ */
+:root {
+    --bg-main: #f4f6fb;
+    --bg-card: #ffffff;
+    --bg-soft: #f1f3f9;
+    --primary: #6c5ce7;
+    --secondary: #00c2ff;
+    --success: #22c55e;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-soft: #e5e7eb;
+    --radius: 14px;
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
+     --topbar-height: 56px;
+}
+
+/* ===============================
+   GLOBAL
+================================ */
+* {
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-main);
+    color: var(--text-main);
+}
+
+
+.liquid-bg {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    filter: blur(140px);
+    opacity: 0.35;
+    z-index: -1;
+}
+
+/* .container {
+    width: 90%;
+    margin: 40px auto;
+} */
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 24px;
+}
+
+/* ===============================
+   TOP NAVIGATION (UPDATED FEEL)
+================================ */
+.top-bar {
+    /* height: var(--topbar-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+     gap: 24px;
+    margin-bottom: 30px; */
+
+
+
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* ===============================
+   LOGO
+================================ */
+
+
+/* Logo spacing before Dashboard */
+.nav-logo {
+    height: var(--topbar-height);
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    padding: 0px 20px;
+    border-radius: 18px;
+    box-shadow:
+        5px 5px 28px rgba(0, 0, 0, 0.16),
+        -5px -5px 23px #ffffff;
+}
+
+
+
+.logo {
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-card);
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.nav-logo img {
+    max-height: 69px;
+    width: auto;
+}
+
+.nav {
+     display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 14px 22px;
+    background: var(--bg-card);
+    border-radius: 18px;
+     box-shadow:
+        5px 5px 28px rgba(0, 0, 0, 0.16),
+        -5px -5px 23px #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.nav a {
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-muted);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav a:hover {
+    background: var(--bg-soft);
+    color: var(--text-main);
+}
+
+/* Base nav items */
+.nav-item {
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 14px;
+    color: #333;
+    font-size: 14px;
+    transition: 0.2s ease;
+
+    /* Shadow 2 (default) */
+    box-shadow:
+        5px 5px 28px rgba(0, 0, 0, 0.16),
+        -5px -5px 23px #ffffff;
+}
+
+/* Hover */
+.nav-item:hover {
+    transform: translateY(-1px);
+}
+
+/* ACTIVE — Shadow 4 */
+.nav-item.active {
+    font-weight: 600;
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        rgba(108, 92, 231, 0.35),
+        rgba(0, 194, 255, 0.35)
+    );
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 8px 25px rgba(108, 92, 231, 0.25);
+}
+
+
+/* Profile */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+     background: var(--bg-card);
+    padding: 12px 18px;
+    border-radius: 20px;
+    box-shadow:
+        5px 5px 28px rgba(0, 0, 0, 0.16),
+        -5px -5px 23px #ffffff;
+    
+        position: relative;
+    cursor: pointer;
+}
+
+
+/* Hover buffer (prevents flicker) */
+.profile::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 18px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+     object-fit: cover;
+    background: var(--bg-soft);
+}
+
+
+.profile strong {
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.profile small {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Dropdown container */
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    min-width: 140px;
+    transform: translateY(-8px);
+    background: #e5e5e5;
+    border-radius: 16px;
+    padding: 10px;
+    z-index: 9999;
+    /* Shadow 4 for emphasis */
+    box-shadow:
+        5px 5px 31px rgba(0, 0, 0, 0.16),
+        -5px -5px 26px #ffffff;
+
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+
+/* Show on hover */
+.profile:hover .profile-dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Logout button */
+.profile-dropdown a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #1f2937;
+
+    box-shadow:
+        inset 3px 3px 8px rgba(0, 0, 0, 0.12),
+        inset -3px -3px 8px #ffffff;
+}
+
+.profile-dropdown a:hover {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+
+
+/* ===============================
+   GLASS NAV CONTAINER
+================================ */
+.nav,
+.nav-logo,
+.profile {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 20px;
+
+    box-shadow:
+        8px 8px 30px rgba(0, 0, 0, 0.15),
+        -8px -8px 30px rgba(255, 255, 255, 0.4);
+}

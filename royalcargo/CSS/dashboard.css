@@ -1,0 +1,249 @@
+/* ===============================
+   ROOT VARIABLES (soft UI)
+================================ */
+:root {
+    --bg-main: #f4f6fb;
+    --bg-card: #ffffff;
+    --bg-soft: #f1f3f9;
+    --primary: #6c5ce7;
+    --secondary: #00c2ff;
+    --success: #22c55e;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-soft: #e5e7eb;
+    --radius: 14px;
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
+     --topbar-height: 56px;
+}
+
+/* ===============================
+   GLOBAL
+================================ */
+body {
+    margin: 0;
+    background: var(--bg-main);
+    color: var(--text-main);
+    overflow-x: hidden;
+    font-family: "Inter", "Segoe UI", sans-serif;
+
+}
+
+.liquid-bg {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    filter: blur(140px);
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+/* ===============================
+   GREETING
+================================ */
+.greeting {
+    margin: 28px 4px;
+}
+
+.greeting h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.greeting p {
+    margin-top: 6px;
+    color: var(--text-muted);
+}
+
+/* ===============================
+   MAIN LAYOUT
+================================ */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.up {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+}
+
+/* ===============================
+   CARDS (SOFT)
+================================ */
+.card {
+    background: var(--bg-card);
+    padding: 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.4);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.card h1 {
+    margin: 0 0 18px;
+    font-size: 18px;
+    color: var(--text-main);
+    text-align: left;
+}
+
+/* ===============================
+   CARGO / SHIPMENT STATUS
+================================ */
+.cardcargo {
+    display: flex;
+    gap: 14px;
+    
+}
+
+.stats-row {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+}
+
+
+
+.received,
+.onprocess,
+.delivered {
+    flex: 1;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 14px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+}
+
+.received span,
+.onprocess span,
+.delivered span {
+    font-weight: 700;
+}
+
+/* ===============================
+   MAP
+================================ */
+.mapdiv {
+    background: var(--bg-card);
+    padding: 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.4);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.mapdiv h3 {
+    margin: 0 0 14px;
+}
+
+.map {
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===============================
+   LOWER SECTION
+================================ */
+.dwn .card.big {
+    background: var(--bg-card);
+    padding: 26px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.4);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ===============================
+   REVENUE
+================================ */
+.revenue {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.revenue h4 {
+    margin: 0;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.revenue h2 {
+    margin-top: 6px;
+    font-size: 28px;
+    color: var(--primary);
+}
+
+/* ===============================
+   CHART PLACEHOLDER
+================================ */
+.chart {
+    height: 260px;
+    background: var(--bg-soft);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 14px;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.6);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+
+
+
+
+.chart-container {
+  display: flex;
+  align-items: flex-end; /* Anchors bars to the bottom */
+  gap: 10px;
+  width: 300px;
+  height: 200px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  padding: 10px;
+    background: var(--bg-soft);
+}
+
+.bar {
+  flex: 1;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  height: var(--size); /* Uses the variable from HTML */
+  transition: height 0.5s ease; /* Adds a nice animation */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.bar:hover {
+  background-color: #45a049;
+}
